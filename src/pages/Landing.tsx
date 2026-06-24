@@ -229,13 +229,11 @@ export default function Landing() {
          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           className="hidden md:block">
-         <a
-           href="https://agentdashboard.lk"
-           target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-amber-500 px-5 py-2.5 text-sm font-semibold text-amber-900 shadow-sm transition hover:bg-amber-600">
-            AgentsforgeX
-          </a>
+         <Link
+           to="/Product"
+           className="inline-flex items-center justify-center rounded-full bg-amber-500 px-5 py-2.5 text-sm font-semibold text-amber-900 shadow-sm transition hover:bg-amber-600">
+           AgentsforgeX
+         </Link>
      </motion.div>
         </div>
 
@@ -253,9 +251,9 @@ export default function Landing() {
             <a href="#contact" onClick={() => setMobileMenuOpen(false)} className={`block rounded-2xl px-4 py-3 text-sm font-medium ${activeSection === 'contact' ? 'bg-amber-200 text-amber-900' : 'text-amber-800 hover:bg-amber-100'}`}>
               Contact
             </a>
-            <a href="https://agentdashboard.lk" target="_blank" rel="noopener noreferrer" className="block rounded-full bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-amber-900 shadow-sm transition hover:bg-amber-600">
+            <Link to="/Product" onClick={() => setMobileMenuOpen(false)} className="block rounded-full bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-amber-900 shadow-sm transition hover:bg-amber-600">
               AgentsforgeX
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
@@ -335,6 +333,28 @@ export default function Landing() {
               Build and manage intelligent agent workflows with governance,
               automation and enterprise ready control.
             </motion.p>
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20
+              }}
+              animate={{
+                opacity: 1,
+                y: 0
+              }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5
+              }}>
+              <Link
+                to="/Product"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-500 px-8 py-3.5 text-base font-bold text-amber-900 shadow-lg shadow-amber-300/30 hover:bg-amber-300 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+              >
+                Explore Forgen x.1
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </motion.div>
           </div>
 
           {/* Right side - Hero SVG image */}
