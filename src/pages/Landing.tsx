@@ -43,6 +43,7 @@ import {
   Users,
   Linkedin,
   X,
+  Menu,
   Youtube,
   Facebook } from
 'lucide-react';
@@ -111,6 +112,7 @@ export default function Landing() {
   useScreenInit();
   const [billingAnnual, setBillingAnnual] = useState(false);
   const [activeSection, setActiveSection] = useState('');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -146,6 +148,15 @@ export default function Landing() {
   const section3Y = useTransform(scrollYProgress, [0.16, 0.24, 0.32], [120, 35, 0]);
   const section3Scale = useTransform(scrollYProgress, [0.16, 0.24, 0.32], [0.78, 0.92, 1]);
   const section3Z = useTransform(scrollYProgress, [0.16, 0.24, 0.32], [0, 1, 2]);
+  
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   const fadeUp = {
     hidden: {
       opacity: 0,
@@ -202,10 +213,22 @@ export default function Landing() {
             </a>
           </div>
 
+          <div className="flex items-center gap-3 md:hidden">
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen((open) => !open)}
+              aria-expanded={mobileMenuOpen}
+              aria-label="Toggle navigation menu"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-amber-200 bg-white text-amber-900 shadow-sm transition hover:bg-amber-100">
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
+
       <motion.div
          initial={{ opacity: 0, x: 20 }}
          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}>
+          transition={{ duration: 0.6 }}
+          className="hidden md:block">
          <a
            href="https://agentdashboard.lk"
            target="_blank"
@@ -214,6 +237,26 @@ export default function Landing() {
             AgentsforgeX
           </a>
      </motion.div>
+        </div>
+
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ${mobileMenuOpen ? 'max-h-[420px] opacity-100 py-4' : 'max-h-0 opacity-0'}`}>
+          <div className="space-y-3 border-t border-amber-200 px-4 pt-4 pb-3 bg-amber-50">
+            <a href="#problem-statement" onClick={() => setMobileMenuOpen(false)} className={`block rounded-2xl px-4 py-3 text-sm font-medium ${activeSection === 'platform' ? 'bg-amber-200 text-amber-900' : 'text-amber-800 hover:bg-amber-100'}`}>
+              Platform
+            </a>
+            <a href="#features" onClick={() => setMobileMenuOpen(false)} className={`block rounded-2xl px-4 py-3 text-sm font-medium ${activeSection === 'features' ? 'bg-amber-200 text-amber-900' : 'text-amber-800 hover:bg-amber-100'}`}>
+              Features
+            </a>
+            <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className={`block rounded-2xl px-4 py-3 text-sm font-medium ${activeSection === 'pricing' ? 'bg-amber-200 text-amber-900' : 'text-amber-800 hover:bg-amber-100'}`}>
+              Pricing
+            </a>
+            <a href="#contact" onClick={() => setMobileMenuOpen(false)} className={`block rounded-2xl px-4 py-3 text-sm font-medium ${activeSection === 'contact' ? 'bg-amber-200 text-amber-900' : 'text-amber-800 hover:bg-amber-100'}`}>
+              Contact
+            </a>
+            <a href="https://agentdashboard.lk" target="_blank" rel="noopener noreferrer" className="block rounded-full bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-amber-900 shadow-sm transition hover:bg-amber-600">
+              AgentsforgeX
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -334,8 +377,8 @@ export default function Landing() {
 
       {/* SECTION 2 - PROBLEM STATEMENT */}
       <motion.section
-        id="problem-statement" className="relative py-8 px-6 bg-amber-100"
-        style={{ y: section2Y, scale: section2Scale, zIndex: section2Z }}>
+        id="problem-statement" className="relative py-4 md:py-8 px-6 bg-amber-100"
+        style={isMobile ? {} : { y: section2Y, scale: section2Scale, zIndex: section2Z }}>
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial="hidden"
@@ -406,8 +449,8 @@ export default function Landing() {
       {/* SECTION 3 - PLATFORM OVERVIEW */}
       <motion.section
         id="platform"
-        className="relative py-1 px-6 bg-amber-50"
-        style={{ y: section3Y, scale: section3Scale, zIndex: section3Z }}>
+        className="relative py-0 md:py-1 px-6 bg-amber-50"
+        style={isMobile ? {} : { y: section3Y, scale: section3Scale, zIndex: section3Z }}>
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial="hidden"
@@ -496,7 +539,7 @@ export default function Landing() {
               once: true
             }}
             variants={fadeUp}
-            className="text-4xl md:text-5xl font-display font-bold text-amber-900 mb-4 uppercase tracking-wide">
+            className="text-2xl md:text-5xl font-display font-bold text-amber-900 mb-2 md:mb-4 uppercase tracking-wide">
             
             How AgentsForgeX Orchestrates Intelligence
           </motion.h2>
@@ -507,12 +550,12 @@ export default function Landing() {
               once: true
             }}
             variants={fadeUp}
-            className="text-xl text-amber-800 mb-16 font-mono">
+            className="text-xs md:text-lg text-amber-800 mb-8 md:mb-16 font-mono">
             
             Powered by NVIDIA-based AI architecture
           </motion.p>
 
-          <div className="relative w-full max-w-4xl mx-auto aspect-[4/3] md:aspect-[16/9] bg-amber-50 rounded-2xl border border-amber-200 shadow-xl p-8 flex flex-col justify-between">
+          <div className="relative w-full max-w-4xl mx-auto aspect-[3/2] md:aspect-[16/9] bg-amber-50 rounded-2xl border border-amber-200 shadow-xl p-4 md:p-8 flex flex-col justify-between">
             {/* Top Layer */}
             <div className="flex justify-center gap-4 z-10">
               {['Enterprise Systems', 'LLMs', 'APIs', 'Databases'].map(
