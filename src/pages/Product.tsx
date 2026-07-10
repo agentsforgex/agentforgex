@@ -16,6 +16,9 @@ import {
   AlertTriangle,
   Menu,
   X,
+  Linkedin,
+  Youtube,
+  Facebook,
   Database
 } from 'lucide-react';
 import logoSvg from '../assets/Logo.svg?url';
@@ -144,10 +147,12 @@ export default function Product() {
   return (
     <div className="min-h-screen bg-amber-50 text-amber-900 font-sans selection:bg-amber-300 selection:text-amber-900 overflow-x-hidden">
       {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-0 bg-amber-50/95 backdrop-blur-md border-b border-amber-200">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 -my-10">
-          <Link to="/" className="inline-flex items-center">
-            <img src={logoSvg} alt="AgentsForgeX logo" className="h-40 w-40" />
+      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-0 bg-amber-50/95 backdrop-blur-md border-b border-amber-200 overflow-visible">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 h-12">
+          <Link to="/" className="inline-flex items-center overflow-visible">
+            <div className="py-1 overflow-visible">
+              <img src={logoSvg} alt="AgentsForgeX logo" className="h-40 w-40" />
+            </div>
           </Link>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-amber-800">
@@ -177,7 +182,7 @@ export default function Product() {
 
           <div className="hidden md:block">
             <a
-              href="https://app.agentsforgex.com"
+              href="https://app.agentsforgex.com/signin"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-amber-500 px-6 py-2.5 text-sm font-semibold text-amber-900 shadow-sm hover:bg-amber-300 transition-all duration-300 transform hover:scale-105"
@@ -202,7 +207,7 @@ export default function Product() {
             <a href="/#contact" onClick={() => setMobileMenuOpen(false)} className="block rounded-2xl px-4 py-3 text-sm font-medium text-amber-800 hover:bg-amber-100">
               Contact
             </a>
-            <a href="https://app.agentsforgex.com" target="_blank" rel="noopener noreferrer" className="block rounded-full bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-amber-900 shadow-sm transition hover:bg-amber-600">
+            <a href="https://app.agentsforgex.com/signin" target="_blank" rel="noopener noreferrer" className="block rounded-full bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-amber-900 shadow-sm transition hover:bg-amber-600">
               Launch Console
             </a>
           </div>
@@ -253,7 +258,7 @@ export default function Product() {
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
             >
               <a
-                href="https://app.agentsforgex.com"
+                href="https://app.agentsforgex.com/signin"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-500 px-8 py-4 text-base font-bold text-amber-900 shadow-lg shadow-amber-300/30 hover:bg-amber-300 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
@@ -839,21 +844,94 @@ export default function Product() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-amber-950 text-amber-500 border-t border-amber-900 py-16 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex items-center gap-3">
-            <span className="font-display font-bold text-white text-lg tracking-wider">AGENTSFORGEX</span>
+      <footer className="bg-[#00332a] text-slate-100 py-16 px-6">
+        <div className="max-w-7xl mx-auto grid items-start grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          <div className="space-y-5">
+            <img src={logoSvg} alt="AgentsForgeX" className="h-20 w-auto -mt-6 self-start" />
+            <p className="text-slate-300 text-sm leading-7">
+              Orchestrates autonomous AI agents into unified enterprise systems, transforming fragmented workflows into coordinated, self-executing intelligence at scale.
+            </p>
           </div>
-          
-          <div className="flex gap-6 text-sm font-medium text-amber-700">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+
+          <div className="space-y-5 self-start">
+            <h4 className="font-semibold text-slate-100 mb-4">Platform</h4>
+            <ul className="space-y-3 text-sm text-slate-300/80">
+              <li>
+                <a href="/#command-center" className="hover:text-white transition-colors">
+                  Orchestration Engine
+                </a>
+              </li>
+              <li>
+                <a href="/#enterprise-scale" className="hover:text-white transition-colors">
+                  Integrations
+                </a>
+              </li>
+              <li>
+                <a href="/#pricing" className="hover:text-white transition-colors">
+                  Pricing
+                </a>
+              </li>
+            </ul>
           </div>
-          
-          <div className="text-xs text-amber-800">
-            © 2026 AgentsForgeX Inc. All rights reserved.
+
+          <div className="space-y-5 self-start">
+            <h4 className="font-semibold text-slate-100 mb-4">Company</h4>
+            <ul className="space-y-3 text-sm text-slate-300/80">
+              <li>
+                <a href="/about" className="hover:text-white transition-colors">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/#contact" className="hover:text-white transition-colors">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="/privacy" className="hover:text-white transition-colors">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="/terms" className="hover:text-white transition-colors">
+                  Terms of Service
+                </a>
+              </li>
+            </ul>
           </div>
+
+          <div className="space-y-5 self-start">
+            <h4 className="font-semibold text-slate-100 mb-4">Social</h4>
+            <p className="text-sm text-slate-300/80">Follow us for the latest product updates and announcements.</p>
+            <div className="flex flex-wrap gap-3">
+              <a href="https://www.linkedin.com/company/agentsforge-x/" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-slate-100 hover:bg-white/20 transition">
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+              <a href="https://x.com/AgentsForgeX" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-slate-100 hover:bg-white/20 transition">
+                <X className="h-5 w-5" />
+                <span className="sr-only">X</span>
+              </a>
+              <a href="https://www.youtube.com/@AgentsForgeX" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-slate-100 hover:bg-white/20 transition">
+                <Youtube className="h-5 w-5" />
+                <span className="sr-only">YouTube</span>
+              </a>
+              <a href="https://www.facebook.com/AgentsForgex/" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-slate-100 hover:bg-white/20 transition">
+                <Facebook className="h-5 w-5" />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a href="https://www.pinterest.com/AgentsForgex/" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-slate-100 hover:bg-white/20 transition">
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 4.99 3.657 9.166 8.438 10.06-.117-.854-.223-2.167.047-3.105.243-.836 1.567-5.314 1.567-5.314s-.398-.797-.398-1.973c0-1.848 1.072-3.228 2.406-3.228 1.136 0 1.684.852 1.684 1.873 0 1.141-.726 2.847-1.102 4.43-.313 1.327.665 2.407 1.973 2.407 2.368 0 4.186-2.494 4.186-6.085 0-3.183-2.291-5.414-5.566-5.414-3.797 0-6.036 2.851-6.036 5.795 0 1.144.44 2.374.99 3.041.109.132.125.247.094.379-.103.412-.337 1.327-.383 1.51-.06.244-.197.296-.456.178-1.694-.79-2.756-3.247-2.756-5.218 0-4.247 3.087-8.147 8.903-8.147 4.672 0 8.305 3.336 8.305 7.793 0 4.654-2.932 8.408-7.003 8.408-1.366 0-2.651-.71-3.087-1.547l-.84 3.197c-.304 1.179-1.127 2.656-1.678 3.553C8.53 23.81 10.241 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" />
+                </svg>
+                <span className="sr-only">Pinterest</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto border-t border-slate-800/70 pt-6 text-sm text-slate-400/80">
+          <p>© 2026 AgentsForgeX Inc. All rights reserved.</p>
         </div>
       </footer>
 

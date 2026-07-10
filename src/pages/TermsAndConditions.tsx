@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoSvg from '../assets/Logo.svg?url';
+import { Linkedin, X, Youtube, Facebook } from 'lucide-react';
 
 export default function TermsAndConditions() {
   return (
@@ -137,96 +139,94 @@ export default function TermsAndConditions() {
         </section>
       </main>
 
-  {/* SECTION 11 - FOOTER */}
-      <footer className="bg-amber-900 text-white py-16 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <div>
-            <h4 className="text-2xl font-display font-bold text-white mb-4">
-              AgentsForgeX Inc.
-            </h4>
-            <p className="text-white/70 text-sm mb-2">
-              Founder: Saravanan Iyer
+      {/* FOOTER */}
+      <footer className="bg-[#00332a] text-slate-100 py-16 px-6">
+        <div className="max-w-7xl mx-auto grid items-start grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          <div className="space-y-5">
+            <img src={logoSvg} alt="AgentsForgeX" className="h-20 w-auto -mt-6 self-start" />
+            <p className="text-slate-300 text-sm leading-7">
+              Orchestrates autonomous AI agents into unified enterprise systems, transforming fragmented workflows into coordinated, self-executing intelligence at scale.
             </p>
-            <p className="text-white/70 text-sm mb-2">
-              Founded: December 05, 2023
-            </p>
-            <p className="text-white/70 text-sm mb-2">
-              1455 Market St, San Francisco, CA 94103, USA
-            </p>
-            <p className="text-white/70 text-sm mb-2">+1 (415) 831-2654</p>
           </div>
-          <div>
-            <h4 className="font-bold text-white mb-4">Platform</h4>
-            <ul className="space-y-2 text-sm text-white/70">
+
+          <div className="space-y-5 self-start">
+            <h4 className="font-semibold text-slate-100 mb-4">Platform</h4>
+            <ul className="space-y-3 text-sm text-slate-300/80">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/#command-center" className="hover:text-white transition-colors">
                   Orchestration Engine
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Multi-Agent Swarms
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Governance
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/#enterprise-scale" className="hover:text-white transition-colors">
                   Integrations
                 </a>
               </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold text-amber-300 mb-4">Developers</h4>
-            <ul className="space-y-2 text-sm text-amber-200/70">
               <li>
-                <span className="opacity-50 cursor-not-allowed">
-                  API Docs — Coming Soon
-                </span>
-              </li>
-              <li>
-                <a href="#" className="hover:text-amber-300 transition-colors">
-                  SDK Reference
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-amber-300 transition-colors">
-                  GitHub
+                <a href="/#pricing" className="hover:text-white transition-colors">
+                  Pricing
                 </a>
               </li>
             </ul>
           </div>
-          <div>
-            <h4 className="font-bold text-amber-300 mb-4">Company</h4>
-            <ul className="space-y-2 text-sm text-amber-200/70">
+
+          <div className="space-y-5 self-start">
+            <h4 className="font-semibold text-slate-100 mb-4">Company</h4>
+            <ul className="space-y-3 text-sm text-slate-300/80">
               <li>
-                <a href="#" className="hover:text-amber-300 transition-colors">
+                <a href="/about" className="hover:text-white transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-amber-300 transition-colors">
+                <a href="#contact" className="hover:text-white transition-colors">
                   Contact
                 </a>
               </li>
               <li>
-                <a href="/privacy" className="hover:text-amber-300 transition-colors">
-                   Privacy Policy
+                <a href="/privacy" className="hover:text-white transition-colors">
+                  Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="/terms" className="hover:text-amber-300 transition-colors">
-                   Terms of Service
+                <a href="/terms" className="hover:text-white transition-colors">
+                  Terms of Service
                 </a>
               </li>
             </ul>
           </div>
+
+          <div className="space-y-5 self-start">
+            <h4 className="font-semibold text-slate-100 mb-4">Social</h4>
+            <p className="text-sm text-slate-300/80">Follow us for the latest product updates and announcements.</p>
+            <div className="flex flex-wrap gap-3">
+              <a href="https://www.linkedin.com/company/agentsforge-x/" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-slate-100 hover:bg-white/20 transition">
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
+              <a href="https://x.com/AgentsForgeX" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-slate-100 hover:bg-white/20 transition">
+                <X className="h-5 w-5" />
+                <span className="sr-only">X</span>
+              </a>
+              <a href="https://www.youtube.com/@AgentsForgeX" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-slate-100 hover:bg-white/20 transition">
+                <Youtube className="h-5 w-5" />
+                <span className="sr-only">YouTube</span>
+              </a>
+              <a href="https://www.facebook.com/AgentsForgex/" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-slate-100 hover:bg-white/20 transition">
+                <Facebook className="h-5 w-5" />
+                <span className="sr-only">Facebook</span>
+              </a>
+              <a href="https://www.pinterest.com/AgentsForgex/" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-slate-100 hover:bg-white/20 transition">
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 4.99 3.657 9.166 8.438 10.06-.117-.854-.223-2.167.047-3.105.243-.836 1.567-5.314 1.567-5.314s-.398-.797-.398-1.973c0-1.848 1.072-3.228 2.406-3.228 1.136 0 1.684.852 1.684 1.873 0 1.141-.726 2.847-1.102 4.43-.313 1.327.665 2.407 1.973 2.407 2.368 0 4.186-2.494 4.186-6.085 0-3.183-2.291-5.414-5.566-5.414-3.797 0-6.036 2.851-6.036 5.795 0 1.144.44 2.374.99 3.041.109.132.125.247.094.379-.103.412-.337 1.327-.383 1.51-.06.244-.197.296-.456.178-1.694-.79-2.756-3.247-2.756-5.218 0-4.247 3.087-8.147 8.903-8.147 4.672 0 8.305 3.336 8.305 7.793 0 4.654-2.932 8.408-7.003 8.408-1.366 0-2.651-.71-3.087-1.547l-.84 3.197c-.304 1.179-1.127 2.656-1.678 3.553C8.53 23.81 10.241 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" />
+                </svg>
+                <span className="sr-only">Pinterest</span>
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="max-w-7xl mx-auto pt-8 border-t border-amber-800 flex flex-col md:flex-row justify-between items-center text-xs text-amber-200/50">
+
+        <div className="max-w-7xl mx-auto border-t border-slate-800/70 pt-6 text-sm text-slate-400/80">
           <p>© 2026 AgentsForgeX Inc. All rights reserved.</p>
         </div>
       </footer>

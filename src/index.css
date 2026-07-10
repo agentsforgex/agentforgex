@@ -7,3 +7,9 @@
 @import 'tailwindcss/utilities';
 
 /* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+/* Anchor targets should scroll into view below the fixed navbar */
+.scroll-offset {
+  /* Anchor targets should scroll into view below the fixed navbar */
+  scroll-margin-top: 3.5rem;
+}
