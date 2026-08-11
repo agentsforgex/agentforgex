@@ -916,7 +916,7 @@ export default function Product() {
                 <Youtube className="h-5 w-5" />
                 <span className="sr-only">YouTube</span>
               </a>
-              <a href="https://www.facebook.com/AgentsForgex/" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-slate-100 hover:bg-white/20 transition">
+              <a href="https://www.facebook.com/AgentsForgex0" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-slate-100 hover:bg-white/20 transition">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </a>
