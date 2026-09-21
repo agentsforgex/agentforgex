@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
               <strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
             </li>
             <li>
-              <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Privacy Policy) refers to Agentsforgex, 1455 Market St, San Francisco, CA 94103, USA.
+              <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Privacy Policy) refers to Agentsforgex, 1455 Market St, San Francisco, CA 94103, USA, with a Sri Lanka branch at No. 42, Peradeniya Road, Kandy, Central Province, 20000, Sri Lanka.
             </li>
             <li>
               <strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.
@@ -295,6 +295,8 @@ export default function PrivacyPolicy() {
               </a>
             </li>
             <li>By phone: +1 (415) 831-2654</li>
+            <li>By mail: No. 42, Peradeniya Road, Kandy, Central Province, 20000, Sri Lanka</li>
+            <li>By phone: <a href="tel:+94765411008" className="text-amber-900 underline hover:text-amber-700">0765411008</a></li>
           </ul>
         </section>
       </main>

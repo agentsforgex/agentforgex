@@ -36,7 +36,7 @@ export default function TermsAndConditions() {
           <ul className="list-disc space-y-3 pl-6 text-amber-800">
             <li><strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
             <li><strong>Country</strong> refers to: California, United States.</li>
-            <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in these Terms and Conditions) refers to Agentsforgex, 1455 Market St, San Francisco, CA 94103, USA.</li>
+            <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in these Terms and Conditions) refers to Agentsforgex, 1455 Market St, San Francisco, CA 94103, USA, with a Sri Lanka branch at No. 42, Peradeniya Road, Kandy, Central Province, 20000, Sri Lanka.</li>
             <li><strong>Device</strong> means any device that can access the Service such as a computer, a cell phone or a digital tablet.</li>
             <li><strong>Service</strong> refers to the Website.</li>
             <li><strong>Terms and Conditions</strong> (also referred to as "Terms") means these Terms and Conditions, including any documents expressly incorporated by reference, which govern Your access to and use of the Service and form the entire agreement between You and the Company regarding the Service. These Terms and Conditions have been created with the help of the{' '}
@@ -135,6 +135,8 @@ export default function TermsAndConditions() {
             <li>By email: connect@agentsforgex.com</li>
             <li>By visiting this page on our website: <a href="https://agentsforgex.com/" rel="external nofollow noopener" target="_blank" className="text-amber-900 underline hover:text-amber-700">https://agentsforgex.com/</a></li>
             <li>By phone: +1 (415) 831-2654</li>
+            <li>By mail: No. 42, Peradeniya Road, Kandy, Central Province, 20000, Sri Lanka</li>
+            <li>By phone: <a href="tel:+94765411008" className="text-amber-900 underline hover:text-amber-700">0765411008</a></li>
           </ul>
         </section>
       </main>

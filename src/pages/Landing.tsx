@@ -1779,8 +1779,14 @@ Craft and handle intelligent agent workflows with compliance, automation and ent
                     <p>USA</p>
                   </div>
                   <div>
-                    <p className="font-semibold text-amber-900 mb-2">Phone</p>
-                    <a href="tel:+14158312654" className="text-amber-900 hover:text-amber-700 transition">+1 (415) 831-2654</a>
+                    <p className="font-semibold text-amber-900 mb-2">Sri Lanka Branch</p>
+                    <p>No. 42, Peradeniya Road</p>
+                    <p>Kandy, Central Province, 20000</p>
+                    <p>Sri Lanka</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-amber-900 mb-2">Sri Lanka Branch Phone</p>
+                    <a href="tel:+94765411008" className="text-amber-900 hover:text-amber-700 transition">0765411008</a>
                   </div>
                   <div>
                     <p className="font-semibold text-amber-900 mb-2">Email</p>
